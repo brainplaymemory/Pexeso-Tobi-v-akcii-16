@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BrainPlay – Pexeso Psí záchranári</title>
+<title>BrainPlay – Pexeso Tobi v akcii</title>
 
 <style>
 
@@ -246,7 +246,7 @@ h1 {
 </div>
 
 <h1 id="title">
-    🐾 Pexeso – Psí záchranári
+    🐾 Pexeso – Tobi v akcii
 </h1>
 
 <button id="newGame">
@@ -290,7 +290,7 @@ const translations = {
 
     sk: {
 
-        title: "🐾 Pexeso – Psí záchranári",
+        title: "🐾 Pexeso – Tobi v akcii",
 
         newGame: "Nová hra",
 
@@ -320,7 +320,7 @@ const translations = {
 
     en: {
 
-        title: "🐾 Memory – Rescue Dogs",
+        title: "🐾 Memory – Tobi in Action",
 
         newGame: "New game",
 
@@ -350,7 +350,7 @@ const translations = {
 
     it: {
 
-        title: "🐾 Memory – Cani soccorritori",
+        title: "🐾 Memory – Tobi in azione",
 
         newGame: "Nuova partita",
 
@@ -381,29 +381,28 @@ const translations = {
 
 
 /* ==========================================
-   DOČASNÉ OBRÁZKY
-
-   Neskôr sem vložíme našich
-   8 Psích záchranárov.
+  TOBI V AKCII – 8 ORIGINÁLNYCH POSTAVIČIEK
+   BrainPlayMemory – Pexeso 16
 ========================================== */
+
 
 const rescueDogs = [
 
-    "psik-hasic-1.png", "psik-hasic-1.png",
+    "Tobi-kominar.png", "Tobi-kominar.png",
 
-    "psik-zachranar-2.png", "psik-zachranar-2.png",
+    "Tobi-kuchar.png", "Tobi-kuchar.png",
 
-    "psik-policajt-3.png", "psik-policajt-3.png",
+    "Tobi-parasutista.png", "Tobi-parasutista.png",
 
-    "psik-strazca-na-stavbe-4.png", "psik-strazca-na-stavbe-4.png",
+    "Tobi-polovnik.png", "Tobi-polovnik.png",
 
-    "psik-horsky-zachranar-5.png", "psik-horsky-zachranar-5.png",
+    "Tobi-potapac.png", "Tobi-potapac.png",
 
-    "psik-vodny-zachranar-6.png", "psik-vodny-zachranar-6.png",
+    "Tobi-smetiar.png", "Tobi-smetiar.png",
 
-    "psik-letecky-zachranar-7.png", "psik-letecky-zachranar-7.png",
+    "Tobi-taxikar.png", "Tobi-taxikar.png",
 
-    "psik-patraci-8.png", "psik-patraci-8.png",
+    "Tobi-traktorista.png", "Tobi-traktorista.png",
 
 ];
 
@@ -664,7 +663,7 @@ function startGame() {
 
         card.classList.add("card");
 
-        card.textContent = "🐾";
+        card.innerHTML = '<img src="Tobi-zadna strana pexesa.png" alt="BrainPlayMemory">';
 
         card.dataset.dog = dog;
 
@@ -694,7 +693,7 @@ function startGame() {
 
                
                if (dog.endsWith(".png")) {
-                   card.innerHTML = `<img src="${dog}" alt="Psí záchranár">`;
+                   card.innerHTML = `<img src="${dog}" alt="Tobi v akcii">`;
                } else {
                    card.textContent = dog;
                }
@@ -808,11 +807,9 @@ function startGame() {
                             .remove("open");
 
 
-                        firstCard.textContent =
-                            "🐾";
+                        firstCard.innerHTML = '<img src="Tobi-zadna strana pexesa.png"               			alt="BrainPlayMemory">';
 
-                        secondCard.textContent =
-                            "🐾";
+                        secondCard.innerHTML = '<img src="Tobi-zadna strana pexesa.png" 			alt="BrainPlayMemory">';
 
 
                         firstCard = null;
